@@ -1,5 +1,5 @@
 # Bash Script execution for remote deployment of web artifacts 💻 
-Execute a bash script on a virtual machine remotely deploying web artifacts on virtual servers.
+### Execute a bash script on a virtual machine remotely deploying web artifacts on virtual servers.
 
 ## Aim 🎯 
 
@@ -12,7 +12,7 @@ Execute a bash script on a virtual machine remotely deploying web artifacts on v
 
 #### Alternatively, another DevOps tool called **ANSIBLE** is also used to make configuration changes
 
-### Required Files 📁 
+## Required Files 📁 
 
 1. **Vagrantfile** containing the configuration of the vagrant box and other requirements of the VMs
 2. **remote_hosts** file for listing the remote VMs
@@ -49,7 +49,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/a3032b55-77bd-406b-b4e7-0934a18312c5)
 
-5. Ping the remote VMs using hostnames to check the connectivity.
+4. Ping the remote VMs using hostnames to check the connectivity.
 
    > ping -c 5 web01
    
@@ -57,7 +57,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/b9906500-f9e6-4dc0-b31f-3112da8ed54c)
 
-6. Add a new user "devops" and a password to the remote VMs for executing the script (do the same for web02).
+5. Add a new user "devops" and a password to the remote VMs for executing the script (do the same for web02).
 
     > adduser devops
     
@@ -65,7 +65,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/79e95c6c-0ad8-4c54-97e8-5bff36cf8b8d)
 
-7. Generate a public and private key.
+6. Generate a public and private key.
 
    A public and private key would be generated which would be used for authentication. The script will use a key-based login when executing remotely.
 
@@ -73,7 +73,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/f4d29aaa-9e49-4544-b8f6-177db989ea35)
 
-9. Add the public key to the remote VMs which would be used for authentication (do the same for web02)
+7. Add the public key to the remote VMs which would be used for authentication (do the same for web02)
 
     The public key acts as a lock and the private key acts as the key which opens the lock during authentication.
 
@@ -83,7 +83,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/1ecf6ed7-0fbd-46ab-84a1-ccdb6db870eb)
 
-11. Add the helper script for artifact deployment "webdeploy.sh"
+8. Add the helper script for artifact deployment "webdeploy.sh"
 
     > vi webdeploy.sh
     
@@ -91,7 +91,7 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
    ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/daf58e76-8049-4401-bb6e-938bf61f4f24)
 
-11. Add the script which has the commands for deployment "websetup.sh"
+9. Add the script which has the commands for deployment "websetup.sh"
 
     > vi websetup.sh
     
@@ -99,13 +99,13 @@ It also has the IP addresses, RAM, and hostname information for each virtual mac
 
     ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/4d59f45d-9ef5-4072-b086-c381060c6ce8)
     
-12. Execute the helper script on the "scriptbox" machine to start the deployment on remote machines
+10. Execute the helper script on the "scriptbox" machine to start the deployment on remote machines
 
     > ./webdeploy.sh
 
     ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/07054ed8-36b5-4734-8d5a-e87995ee7981)
 
-13. Check the output on the corresponding IP addresses of the remote servers
+11. Check the output on the corresponding IP addresses of the remote servers
 
     ![image](https://github.com/Vedant-MAHAjan/Bash-Scripting/assets/88843623/0f7ec1ae-9864-4ac5-af3c-8a69926be19e)
 
