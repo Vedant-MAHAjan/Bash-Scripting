@@ -10,7 +10,7 @@
 
 #### This approach can be used to make configurations, update packages, and take backups from hundreds of virtual servers. 
 
-#### Alternatively, another DevOps tool called **ANSIBLE** is also used to make configuration changes
+#### Alternatively, another DevOps tool called **ANSIBLE** is widely used to make configuration changes
 
 ## Required Files 📁 
 
