@@ -15,3 +15,7 @@ do
    echo "#########################################################"
    echo
 done 
+
+# websetup.sh file is copied to the /tmp/ folder of the host machine
+# Then, it is executed on the host using ssh
+# At last, it is removed from the host machine for security and cleanliness
