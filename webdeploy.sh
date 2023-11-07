@@ -2,7 +2,7 @@
 
 USR='devops'
 
-for host in `cat rempte_hosts`
+for host in `cat remote_hosts`
 do
    echo
    echo "#########################################################"
